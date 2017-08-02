@@ -61,6 +61,8 @@ if [[ "$INSTALL_OPENCV" = 1 ]] ; then
     rm -rf ~/ocv-tmp
 fi
 
+cd ~
+
 if [[ "$INSTALL_TORCH" = 1 ]] ; then
     curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash -e
     git clone https://github.com/torch/distro.git ~/torch --recursive
@@ -74,6 +76,8 @@ if [[ "$INSTALL_TORCH" = 1 ]] ; then
     ./luarocks install torchx && \
     ./luarocks install tds
 fi
+
+cd ~
 
 if [[ "$INSTALL_DLIB" = 1 ]] ; then
      cd ~ && \
@@ -91,6 +95,8 @@ if [[ "$INSTALL_DLIB" = 1 ]] ; then
      cp dlib.so /usr/local/lib/python2.7/dist-packages && \
      rm -rf ~/dlib-tmp
 fi
+
+cd ~
 
 git clone https://github.com/cmusatyalab/openface.git ~/openface --recursive
 cd ~/openface && \
