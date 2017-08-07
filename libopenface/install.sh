@@ -2,7 +2,7 @@
 set -ex
 
 # Make it "0" if you have already OpenCV
-INSTALL_OPENCV=1
+INSTALL_OPENCV=0
 # Make it "0" if you have already Dlib
 INSTALL_DLIB=1
 # Make it "0" if you have already Torch, but you need to install
@@ -103,5 +103,7 @@ cd ~/openface && \
     ./models/get-models.sh && \
     pip2 install -r requirements.txt && \
     python2 setup.py install && \
+
+echo  'PATH=$PATH\:/root/torch/install/bin ; export PATH' >> ~/.bashrc
 
 echo Installation of dependencies of cob_people_detection completed
