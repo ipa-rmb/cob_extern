@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+	<name>libopenface</name>
+	<version>0.6.10</version>
+	<description>
+		This package wraps the openface package to use it in ROS
+	</description>
+
+	<url type="website">https://cmusatyalab.github.io/openface/</url>
+	<maintainer email="cagatay.odabasi@ipa.fraunhofer.de">Cagatay Odabasi</maintainer>
+	<license>LGPL</license>
+
+	<buildtool_depend>catkin</buildtool_depend>
+
+</package>
